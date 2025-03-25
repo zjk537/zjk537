@@ -1,0 +1,17 @@
+{
+  "name": "zjk537",
+  "version": "1.0.0",
+  "description": "小试牛刀",
+  "main": "index.js",
+  "repository": "https://gitee.com/zjk537/zjk537.git",
+  "author": "zjk537",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs && npx gulp"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "vuepress": "^2.0.0-beta.60"
+  }
+}

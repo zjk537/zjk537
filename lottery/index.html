@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="screen-orientation" content="portrait">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+  <title>抽奖</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  
+  <script type="text/javascript">
+    let styleValue = localStorage.getItem('act_style')
+    if(styleValue){
+      let linkEl = document.createElement('link')
+      linkEl.href = `skin/${styleValue}/main.css`
+      linkEl.id = 'linkStyle'
+      linkEl.rel = 'stylesheet'
+      linkEl.type = 'text/css';
+      document.head.appendChild(linkEl);
+    }
+  </script>
+</head>
+<body>
+<div id="main" class="wall"></div>
+<div id="title" class="title-panel">
+  抽奖活动
+</div>
+<div class="result-panel">
+  <a href="./result.html" target="_blank">获奖名单</a>
+  <a href="./setting.html" style="margin-left:.2rem" target="_blank">设置</a>
+</div>
+<div id="tools" class="tools">
+  <button id="btnStart" class="pure-button btn-start">开始</button>
+  <button id="btnReset" class="pure-button btn-reset">重置</button>
+</div>
+
+<div id="dgResetConfirm" class="mask">
+  <div class="dialog">
+    <div class="title">
+      确认重置 <span class="close">X</span>
+    </div>
+    <div class="center">
+      确定要重置么？所有之前的抽奖历史将被清除！
+    </div>
+    <div class="footer">
+      <span class="pure-button btn-canel">取消</span>
+      <span class="pure-button btn-confirm">确定</span>
+    </div>
+  </div>
+</div>
+
+<div id="dgResult" class="mask">
+  <div class="dialog result">
+    <span class="close">X</span>
+    <div class="center">
+      
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/adaptive.js"></script>
+<script type="text/javascript" src="js/tagcanvas.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

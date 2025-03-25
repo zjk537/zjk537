@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="screen-orientation" content="portrait">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+  <title>图片增加水印</title>
+  <link rel="stylesheet" href="./iconfont.css">
+  <link rel="stylesheet" href="./site.css">
+  <script type="text/javascript" src="./static/jquery.min.js"></script>
+  <script type="text/javascript" src="./html2canvas.min.js"></script>
+</head>
+<body>
+  <header>
+    <ul id="navbar">
+      <li><a id="btnZoomin" class="icon icon-zoomin" href="javascript:void(0);">放大</a></li>
+      <li><a id="btnZoomout" class="icon icon-zoomout" href="javascript:void(0);">缩小</a></li>
+      <li><a id="btnTrans" class="icon icon-nishizhenxuanzhuan" href="javascript:void(0);">旋转90度</a></li>
+      <li>
+        <a id="btnWatermark" class="icon icon-shuiyin" href="javascript:void(0);">水印</a>
+        <div class="toolbar">
+          <p>
+            <label>水印文案：</label><input id="txtTitle" type="text" class="nomal" value="zjk537 Design">
+          </p>
+          <p>
+            <label>水印颜色：</label><input id="txtColor" type="text" class="nomal" value="rgba(17, 17, 17, 0.10)"> <em id="btnColor" class="icon icon-color-picker"></em>
+          </p>
+          <p>
+            <label>字体大小：</label><input id="txtFont" type="text" class="nomal px" value="14">
+          </p>
+          <p>
+            <label>倾斜角度：</label><input id="txtRotate" type="text" class="nomal" value="30"> 
+          </p>
+          <p>
+            <label>宽度：</label><input id="txtWidth" type="text" class="nomal px" value="200">
+          </p>
+          <p>
+            <label>高度：</label><input id="txtHeight" type="text" class="nomal px" value="100">
+          </p>
+          <p class="uneven">
+            <button class="set-btn" id="btnConfirm">确定</button>
+          </p>
+          <em class="icon icon-close closeIt"></em>
+        </div>
+      </li>
+      <li><a id="btnClear" class="icon icon-lajixiang" href="javascript:void(0);">清空</a>
+      <li><a id="btnExport" class="icon icon-export" title="导出页面到本地" href="javascript:void(0);">导出</a>
+    </ul>
+  </header>
+  <div class="main">
+    <div class="welcome">
+      <div id="upload" style="width: 500px;">
+        <h1>图片添加水印工具</h1>
+        <div class="dropbox">
+          <h3>导入一张图片试试</h3>
+          <p>选择或拖拽图片到此处</p>
+          <input type="file" name="loadimage" id="loadimage" accept="image/jpeg, image/png" unselectable="on">
+          <p class="know">推荐使用Chrome、Firefox或IE11等支持HTML5的浏览器<br>支持Png、Jpg格式图片</p>
+        </div>
+      </div>
+    </div>
+    <div id="imgBox" class="imgbox"></div>
+  </div>
+
+  <script type="text/javascript" src="./watermark.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
